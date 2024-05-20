@@ -1,11 +1,3 @@
-/**
-* Template Name: Bocor
-* Template URL: https://bootstrapmade.com/bocor-bootstrap-template-nice-animation/
-* Updated: Mar 17 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
 (function() {
   "use strict";
 
@@ -190,6 +182,41 @@
       clickable: true
     }
   });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var swiper = new Swiper('.clients-slider', {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      autoplay: {
+        delay: 1000,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 40,
+        },
+      },
+    });
+  });
+  
+
 
   /**
    * Animation on scroll
