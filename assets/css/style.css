@@ -114,6 +114,17 @@ h6 {
 */
 .navbar {
   padding: 0;
+  transition: all 0.5s;
+  width: 100%;
+  background: transparent;
+}
+.navbar.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 998;
+  background: #17212e;
 }
 
 .navbar ul {
@@ -176,7 +187,7 @@ h6 {
   left: 14px;
   top: calc(100% + 30px);
   margin: 0;
-  /* padding: 10px 0; */
+  /* padding: 10px; */
   z-index: 99;
   opacity: 0;
   visibility: hidden;
@@ -237,12 +248,18 @@ h6 {
 }
 
 @media (max-width: 1366px) {
+  .navbar .dropdown ul {
+    left: 0; 
+    right: 80; 
+  }
+
   .navbar .dropdown .dropdown ul {
-    left: -90%;
+    left: 0; 
+    right: auto;
   }
 
   .navbar .dropdown .dropdown:hover>ul {
-    left: -100%;
+    left: 0; 
   }
 }
 
@@ -409,7 +426,22 @@ h6 {
   background: #4eb03f;
 }
 
-.btn-get-about:hover {
+.btn-get-about:hover {        
+  opacity: 0.8;
+  color: #fff;
+}
+.btn-get-free-estimate  {
+  color: #fff;
+  border-radius: 10px;
+  width: 380px;
+  padding: 15px 20px 15px 20px;
+  border: 2px solid #ed8a09;
+  transition: all ease-in-out 0.3s;
+  display: inline-block;
+  background: #ed8a09;
+}
+
+.btn-get-free-estimate:hover {
   opacity: 0.8;
   color: #fff;
 }
@@ -692,6 +724,11 @@ section {
   background: url("../img/digital-marketing-services.jpg.webp") center center no-repeat;
   background-size: cover;
   min-height: 400px;
+}
+.about .estimate-image {
+  background: url("../img/john-battaglini.webp") center center no-repeat;
+  background-size: cover;
+  min-height: 300px;
 }
 
 @media (max-width: 667px) {
@@ -1345,46 +1382,37 @@ section {
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
-#footer {
-  background: url("../img/footer-bg.jpg") center center no-repeat;
+
+.footer {
+  background-color: #076794;
+  color: white;
+  padding: 30px 0;
+}
+.footer .section-footer{
+  background: #0371a3;
+  border-radius:10px;
+}
+.footer a {
   color: #fff;
-  font-size: 14px;
-  position: relative;
+  text-decoration: none;
 }
-
-#footer::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  background: rgba(26, 46, 64, 0.85);
-  z-index: 1;
+.footer a:hover {
+  color: #FFD700;
 }
-
-#footer .footer-top {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  padding: 80px 0;
+.footer .footer-column h5 {
+  margin-bottom: 20px;
+  font-weight: bold;
 }
-
-#footer .footer-top h3 {
-  font-size: 36px;
-  font-weight: 700;
-  color: #fff;
-  position: relative;
-  font-family: "Poppins", sans-serif;
-  padding-bottom: 0;
-  margin-bottom: 0;
+.footer .footer-column ul {
+  list-style-type: none;
+  padding-left: 0;
 }
-
-#footer .footer-top p {
-  font-size: 15;
-  font-style: italic;
-  margin: 30px 0 0 0;
-  padding: 0;
+.footer .footer-column ul li {
+  margin-bottom: 10px;
+}
+.footer .social-links a {
+  margin-right: 10px;
+  font-size: 25px !important;
 }
 
 #footer .footer-top .footer-newsletter {
@@ -1393,7 +1421,7 @@ section {
   margin-top: 30px;
 }
 
-#footer .footer-top .footer-newsletter form {
+#footer .footer-newsletter form {
   background: #fff;
   padding: 6px 10px;
   position: relative;
@@ -1402,13 +1430,13 @@ section {
   text-align: left;
 }
 
-#footer .footer-top .footer-newsletter form input[type=email] {
+#footer .footer-newsletter form input[type=email] {
   border: 0;
   padding: 4px 8px;
   width: calc(100% - 100px);
 }
 
-#footer .footer-top .footer-newsletter form input[type=submit] {
+#footer .footer-newsletter form input[type=submit] {
   position: absolute;
   top: 0;
   right: -1px;
@@ -1424,60 +1452,32 @@ section {
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
 }
 
-#footer .footer-top .footer-newsletter form input[type=submit]:hover {
+#footer .footer-newsletter form input[type=submit]:hover {
   background: #fcb102;
 }
 
-#footer .footer-top .social-links {
-  margin-top: 30px;
-}
 
-#footer .footer-top .social-links a {
-  font-size: 18px;
-  display: inline-block;
-  background: #284864;
+#article-1 {
+  background-color: #2c7e9c;
+  background-image: url("../img/features/ecommerce-website-features.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
   color: #fff;
-  line-height: 1;
-  padding: 8px 0;
-  margin-right: 4px;
-  border-radius: 50%;
-  text-align: center;
-  width: 36px;
-  height: 36px;
-  transition: 0.3s;
 }
-
-#footer .footer-top .social-links a:hover {
-  background: #fcb102;
+#article-2 {
+  background-color: #4a9c40;
+  background-image: url("../img/features/ecommerce-seo-guide.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
   color: #fff;
-  text-decoration: none;
 }
-
-#footer .footer-bottom {
-  border-top: 1px solid #1a2e40;
-  z-index: 2;
-  position: relative;
-  padding-top: 40px;
-  padding-bottom: 40px;
-}
-
-#footer .copyright {
-  text-align: center;
-  float: left;
-}
-
-#footer .credits {
-  float: right;
-  text-align: center;
-  font-size: 13px;
-}
-
-@media (max-width: 768px) {
-
-  #footer .copyright,
-  #footer .credits {
-    padding: 5px;
-    float: none;
-    text-align: ceneter;
-  }
+#article-3 {
+  background-color: #d99e50;
+  background-image: url("../img/features/seo-podcast-2.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
 }
