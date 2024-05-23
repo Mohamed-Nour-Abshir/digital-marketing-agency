@@ -617,6 +617,27 @@ section {
   transition: all 0.4s ease-in-out;
 }
 
+.clients .google-client-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 150px;
+}
+
+.clients .google-client-logo img {
+  height: 100px;
+  width: 100px;
+}
+
+.clients .google-client-logo:hover img {
+  transform: scale(1.2);
+}
+
+.clients img {
+  transition: all 0.4s ease-in-out;
+}
+
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
@@ -1481,4 +1502,213 @@ section {
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
+}
+
+
+
+/*--------------------------------------------------------------
+# Google Adds Page
+--------------------------------------------------------------*/
+#adds-info .adds-info-title{
+  color: #0f6e91;
+  font-size: 45px;
+  font-weight: bolder;
+}
+#adds-info .adds-info-content{
+  font-size: 20px;
+}
+#adds-info .adds-info-list{
+  list-style-type: none;
+}
+#adds-info .adds-info-list li{
+  margin-bottom: 10px;
+  margin-left: -30px;
+}
+#adds-info .adds-info-list .bx-check{
+  background: green;
+  color: #fff;
+  /* padding: 5px; */
+  border-radius: 50%;
+  font-size: 20px;
+}
+#adds-info .adds-info-extra-content{
+  color: #ff0000;
+}
+#adds-info .adds-info-extra-content a{
+  color: #ff0000;
+  text-decoration: underline;
+}
+#adds-info .adds-info-btn{
+  background: #ed8a09;
+  color: #fff;
+  padding: 10px 40px;
+  font-weight: bolder;
+  font-size: 18px;
+  border: 10px solid #ed8a09;
+}
+
+
+#company-status {
+  background-color: #757575;
+  color: white;
+  padding: 20px 0;
+}
+
+#company-status .company-status-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+#company-status .company-status-content > div {
+  flex: 1;
+  margin: 0 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#company-status .company-status-content img {
+  max-width: 50px;
+  margin-right: 10px;
+}
+
+#company-status .company-status-content .d-flex {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+#company-status h3 {
+  font-size: 2em;
+  margin: 0;
+}
+
+#company-status p {
+  margin: 0;
+}
+
+
+.btn-custom {
+  background-color: #4eb03f;
+  border-color: #4eb03f;
+  color: white; 
+}
+
+.btn-custom:hover {
+  background-color: #45a537; 
+  border-color: #45a537;
+}
+
+
+.btn-custom-paid {
+  background-color: #4eb03f;
+  border-color: #4eb03f;
+  color: white; 
+  padding: 20px;
+  font-size: 24px;
+  font-weight: bolder;
+}
+
+.btn-custom-paid:hover {
+  background-color: #45a537; 
+  border-color: #45a537;
+}
+
+
+.contact-section{
+  background: #f2f2f2;
+  border: 3px solid #d4d4d4;
+  padding-right: 100px !important;
+}
+
+
+.accordion {
+  width: 1000px;
+  margin: 90px auto;
+  color: black;
+  background-color: white;
+  padding: 45px 45px;
+}
+
+.accordion .container {
+  position: relative;
+  margin: 10px 10px;
+}
+
+.accordion .label {
+  position: relative;
+  padding: 10px 0;
+  font-size: 24px;
+  color: black;
+  cursor: pointer;
+}
+
+.accordion .label::before {
+  content: '+';
+  color: #fff;
+  background: #ed8a09;
+  position: absolute;
+  border-radius: 50%;
+  width: 40px;  
+  height: 40px; 
+  top: 50%;
+  left: -60px; 
+  font-size: 24px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-50%);
+}
+
+.accordion .content {
+  position: relative;
+  background: white;
+  height: 0;
+  font-size: 16px;
+  text-align: justify;
+  width: 780px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+/* Adds a horizontal line between the contents */
+.accordion hr {
+  width: 100;
+  margin-left: 0;
+  border: 1px solid grey;
+}
+
+.accordion .container.active .content {
+  height: 150px;
+}
+
+/* Changes from plus sign to negative sign once active */
+.accordion .container.active .label::before {
+  content: '-';
+  background: #01678c;
+}
+
+.btn-custom-faq {
+  background-color: #ed8a09;
+  border-color: #ed8a09;
+  color: white; 
+  padding: 10px 40px;
+  font-size: 24px;
+  font-weight: bolder;
+}
+
+.btn-custom-faq:hover {
+  background-color: #ed8a09; 
+  border-color: #ed8a09;
+}
+
+.custom-square-list {
+  list-style-type: square;
+}
+
+.custom-square-list li::marker {
+  color: #ed8a09;
+  font-size: 30px;
 }
